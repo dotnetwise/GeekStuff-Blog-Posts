@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    @RenderBody()
+
+    @Html.AdvRouteLink("Go to admin", "Admin_Home")
+    <br />
+    @Html.AdvRouteLink("Go to blog", "Blog_Home")
+    <br />
+    @Html.AdvRouteLink("Go to home page", "Site_Home")
+    <br />
+    @Html.AdvRouteLink("Login", "Admin_Login") 
+    <br />
+
+    <h3>Blog Posts</h3>
+    @Html.AdvRouteLink("Hello World", "Blog_ShowPost", new { slug = "hello-world" })  <br />
+    @Html.AdvRouteLink("ASP.NET Routing", "Blog_ShowPost", new { slug = "aspnet-routing" })  <br />
+</body>
+</html>
