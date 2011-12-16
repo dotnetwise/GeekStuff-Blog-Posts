@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = CommonStrings.HomeTitle;
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("button#submit").click(function () {
+            alert(CommonStrings.ButtonMessage);
+        });
+    });
+</script>
+
+@Html.ActionLink("English", "Index", "Home", new { culture = "en" }, new { }) | 
+@Html.ActionLink("Português", "Index", "Home", new { culture = "pt" }, new { }) |
+@Html.ActionLink("Español", "Index", "Home", new { culture = "es" }, new { })
+
+<h2>@CommonStrings.HomeTitle</h2>
+
+@CommonStrings.WelcomeMessage
+
+<br /> <br />
+
+<button id="submit" type="button">@CommonStrings.Submit</button>
