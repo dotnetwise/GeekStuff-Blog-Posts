@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script type="text/javascript">
+
+    Url.Login = function () {
+        return this.Route("Login");
+    }
+
+    $(document).ready(function () {
+        var url = "";
+
+        url = Url.Route("Default");
+        $("#sp1").html(url);
+
+        url = Url.Route("ProductDetails", { id: 3 });
+        $("#sp2").html(url);
+
+        url = Url.Route("ProductDetails");
+        $("#sp3").html(url);
+
+        url = Url.Login();
+        $("#sp4").html(url);
+    });
+</script>
+
+<p><b>Default Route:</b> <span id="sp1"></span></p>
+<p><b>Product #3 Details:</b> <span id="sp2"></span></p>
+<p><b>Default Product Details:</b> <span id="sp3"></span></p>
+<p><b>Login:</b> <span id="sp4"></span></p>
