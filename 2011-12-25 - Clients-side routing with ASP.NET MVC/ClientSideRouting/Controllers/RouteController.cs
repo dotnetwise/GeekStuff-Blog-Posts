@@ -22,7 +22,7 @@ namespace ClientSideRouting.Controllers
 
             foreach (Route route in RouteTable.Routes)
             {
-                if (route.RouteHandler.GetType().Equals(typeof(MvcRouteHandler)))
+                if (route.RouteHandler is MvcRouteHandler)
                 {
                     string name = Convert.ToString(route.DataTokens["RouteName"]);
                     string url = route.Url;
